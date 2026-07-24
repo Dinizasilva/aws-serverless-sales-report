@@ -1,3 +1,5 @@
+![Banner do Projeto](IMG_0295%20(1).jpg)
+
 🚀 Automação Serverless de Relatórios de Vendas com AWS Lambda
 Repositório dedicado à documentação de um laboratório prático de arquitetura serverless na AWS, focado na automação de extração de dados de um banco MySQL e envio de relatórios via Amazon SNS.
 
