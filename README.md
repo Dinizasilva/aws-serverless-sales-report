@@ -1,4 +1,4 @@
-![Banner do Projeto](IMG_0295%20(1).jpg)
+<img src="IMG_0295%20(1).jpg" width="500" alt="Banner do Projeto">
 
 🚀 Automação Serverless de Relatórios de Vendas com AWS Lambda
 Repositório dedicado à documentação de um laboratório prático de arquitetura serverless na AWS, focado na automação de extração de dados de um banco MySQL e envio de relatórios via Amazon SNS.
