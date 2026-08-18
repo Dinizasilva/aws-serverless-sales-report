@@ -77,8 +77,6 @@ Essa separação ajudou a dividir responsabilidades. Uma função cuida da extra
 
 ## Arquitetura da solução
 
-```mermaid
-
 <img src="aws_lambda_mysql_architecture_700.png" alt="AWS Lambda MySQL Architecture" width="700">
 
 
