@@ -80,6 +80,11 @@ Essa separação ajudou a dividir responsabilidades. Uma função cuida da extra
 <img src="aws_lambda_mysql_architecture_700.png" alt="AWS Lambda MySQL Architecture" width="700">
 
 
+Ele mostra claramente como o EC2 MySQL Database, as funções Lambda com a camada PyMySQL, o Amazon SNS e o EventBridge se conectam para extrair dados, gerar relatórios e enviar notificações por e-mail.
+
+Esse tipo de visualização ajuda bastante a entender a arquitetura e facilita ajustes futuros, como adicionar novas funções Lambda ou expandir os assinantes do SNS.
+
+
 ### Fluxo da arquitetura
 
 1. O EventBridge dispara a função principal em um horário definido.
