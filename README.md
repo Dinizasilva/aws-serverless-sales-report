@@ -78,35 +78,9 @@ Essa separação ajudou a dividir responsabilidades. Uma função cuida da extra
 ## Arquitetura da solução
 
 ```mermaid
-architecture-beta
-    aws-cloud[AWS Cloud]
 
-    group database_group(aws-cloud) {
-        ec2_mysql[EC2 - MySQL Database]
-    }
+<img src="aws_lambda_mysql_architecture_700.png" alt="AWS Lambda MySQL Architecture" width="700">
 
-    group lambda_group(aws-cloud) {
-        lambda_extractor[Lambda - Data Extractor]
-        lambda_report[Lambda - Sales Report]
-        lambda_layer[Lambda Layer - PyMySQL]
-    }
-
-    group messaging_group(aws-cloud) {
-        sns_topic[Amazon SNS - Report Topic]
-        email[Email Subscriber]
-    }
-
-    group scheduling_group(aws-cloud) {
-        eventbridge[Amazon EventBridge]
-    }
-
-    lambda_layer:R -- L:lambda_extractor "PyMySQL"
-    lambda_extractor:L -- R:ec2_mysql "MySQL / 3306"
-    lambda_extractor:R -- L:lambda_report "Extracted Data"
-    lambda_report:R -- L:sns_topic "Publish Report"
-    sns_topic:R -- L:email "Email"
-    eventbridge:B -- T:lambda_report "Scheduled Trigger"
-```
 
 ### Fluxo da arquitetura
 
